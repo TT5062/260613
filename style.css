@@ -46,10 +46,12 @@ body {
 }
 
 .card {
-    background: rgba(16, 20, 45, 0.55); /* 몽환적인 우주 배경에 어울리는 유리 질감 */
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05); /* 투명도를 높여 진짜 유리처럼 */
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
     border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 24px;
     padding: 4rem 3rem;
     text-align: center;

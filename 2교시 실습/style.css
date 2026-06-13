@@ -120,16 +120,18 @@ body {
 
 /* Glassmorphism 카드 공통 스타일 */
 .card {
-    background: rgba(20, 20, 25, 0.4);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-left: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 24px;
     padding: 3rem;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), border-color 0.4s ease, box-shadow 0.4s ease;
     animation: fadeInUp 1s ease-out backwards;
 }
 
