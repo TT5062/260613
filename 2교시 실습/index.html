@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바이브코딩 | Vibe Coding</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 배경 효과 -->
+    <div class="background-grid"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <!-- 헤더 섹션 -->
+    <header class="hero">
+        <h1 class="title">VIBE CODING</h1>
+        <p class="subtitle">코드가 아닌 <strong>'느낌'</strong>으로 프로그래밍하다</p>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="content">
+        <section class="intro card">
+            <h2>바이브코딩이란?</h2>
+            <p>복잡한 문법과 로직을 직접 짜는 대신, AI에게 여러분이 원하는 <strong>'바이브(분위기/의도)'</strong>를 자연어로 설명하여 코드를 완성하는 새로운 패러다임의 개발 방식입니다. 마치 마법 주문을 외우듯, 상상하는 것을 글로 적기만 하면 눈앞에 현실로 나타납니다.</p>
+        </section>
+
+        <section class="features">
+            <div class="feature-card card">
+                <div class="icon">💬</div>
+                <h3>자연어로 대화하듯</h3>
+                <p>"여기에 몽환적인 우주 느낌의 배경을 넣어줘" 처럼 상상하는 그대로를 입력하세요. 복잡한 코드는 AI가 알아서 작성해 드립니다.</p>
+            </div>
+            <div class="feature-card card">
+                <div class="icon">⚡️</div>
+                <h3>초고속 프로토타이핑</h3>
+                <p>며칠이 걸리던 작업이 단 몇 분, 몇 초 만에 눈앞에 구현됩니다. 머릿속 아이디어를 즉각적으로 시각화할 수 있습니다.</p>
+            </div>
+            <div class="feature-card card">
+                <div class="icon">🎨</div>
+                <h3>한계 없는 창의력</h3>
+                <p>기술적 한계나 문법적 오류에 부딪히지 않고, 오직 아이디어와 기획, 디자인의 본질에만 집중할 수 있습니다.</p>
+            </div>
+        </section>
+
+        <section class="cta">
+            <button class="glow-button">지금 바로 바이브를 느껴보세요</button>
+        </section>
+    </main>
+
+    <script>
+        // 마우스를 따라다니는 인터랙티브 빛 효과 (Glassmorphism Hover Effect)
+        const cards = document.querySelectorAll('.card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
+</body>
+</html>
