@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>고1 수강신청 페이지</title>
+  <!-- 외관을 꾸며줄 CSS 파일 연결 (아직 안 만들었지만 미리 연결해둡니다) -->
+  <link rel="stylesheet" href="style.css">
+  <!-- 구글 머티리얼 아이콘 (시인성 쑥쑥!) -->
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+  <!-- <header>: 집의 멋진 간판 같은 역할입니다. 제일 위에 눈에 띄게! -->
+  <header>
+    <h1>LevUp 수강신청</h1>
+  </header>
+
+  <!-- <main>: 집의 널찍한 거실입니다. 핵심 내용이 여기에 다 들어갑니다. -->
+  <main>
+    <!-- <section>: 거실 안의 특정 공간(예: 소파 자리)처럼 의미 있는 영역을 나눕니다. -->
+    <section class="login-card">
+      <h2>환영합니다, 1학년 여러분!</h2>
+      <p>원하는 과목을 담기 위해 학번과 이름을 입력해주세요.</p>
+      
+      <!-- <form>: 학교에 서류를 제출하는 봉투 같은 겁니다. 입력한 정보를 모아줍니다. -->
+      <form id="loginForm">
+        
+        <!-- <div>: 요소들을 묶어주는 투명한 비닐봉지입니다. 라벨과 입력칸을 세트로 묶습니다. -->
+        <div class="input-group">
+          <!-- <label>: "이 상자는 학번을 넣는 곳이야"라고 알려주는 이름표입니다. -->
+          <label for="studentId">학번</label>
+          <div class="input-wrapper">
+            <span class="material-symbols-outlined icon">badge</span>
+            <input type="text" id="studentId" placeholder="예: 10101">
+          </div>
+        </div>
+        
+        <div class="input-group">
+          <label for="studentName">이름</label>
+          <div class="input-wrapper">
+            <span class="material-symbols-outlined icon">person</span>
+            <input type="text" id="studentName" placeholder="예: 피카츄">
+          </div>
+        </div>
+        
+        <!-- <button>: 모든 준비를 마치고 누르는 발사 버튼! -->
+        <button type="submit" class="btn-primary">
+          <span class="material-symbols-outlined">login</span>
+          수강신청 입장
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- 작동을 지시할 자바스크립트 파일 연결 (전기줄 연결) -->
+  <script src="script.js"></script>
+</body>
+</html>

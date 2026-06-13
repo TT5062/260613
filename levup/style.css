@@ -1,0 +1,149 @@
+/* 폰트 불러오기: 원티드 산스 (Wanted Sans) - 글씨체가 훨씬 깔끔하고 모던해집니다! */
+@import url('https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.1/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css');
+
+/* 1. 디자인 시스템 변수 설정 (우리가 쓸 물감과 도구들) */
+:root {
+  --kraken-purple: #7132f5;
+  --kraken-purple-dark: #5741d8;
+  --text-main: #101114;
+  --text-secondary: #9497a9;
+  --bg-white: #ffffff;
+  --bg-subtle: #f8f9fa; /* 배경을 살짝 구분해주기 위해 추가 */
+  --border-gray: #dedee5;
+  --shadow-subtle: rgba(0,0,0,0.03) 0px 4px 24px;
+}
+
+/* 2. 전체 페이지 기본 설정 (벽지 바르기) */
+body {
+  margin: 0;
+  font-family: 'Wanted Sans Variable', 'Wanted Sans', sans-serif;
+  background-color: var(--bg-subtle);
+  color: var(--text-main);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* 3. 헤더 (간판 디자인) */
+header {
+  width: 100%;
+  padding: 24px 0;
+  text-align: center;
+  background-color: var(--bg-white);
+  border-bottom: 1px solid var(--border-gray);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--kraken-purple);
+}
+
+/* 4. 메인 콘텐츠 (거실 배치) */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+}
+
+/* 5. 로그인 카드 (소파와 테이블 세트) */
+.login-card {
+  background-color: var(--bg-white);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-subtle);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-card h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.login-card p {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 32px;
+}
+
+/* 6. 입력 폼 (서류 작성 공간) */
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+/* 아이콘을 입력칸 안에 예쁘게 넣기 위한 투명 상자 만들기 */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* 아이콘 위치 잡기 (입력칸 안쪽 왼쪽에 착!) */
+.input-wrapper .icon {
+  position: absolute;
+  left: 12px;
+  color: var(--text-secondary);
+  font-size: 20px;
+  transition: color 0.2s; /* 부드럽게 색깔 바뀌는 효과 */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 13px 16px 13px 40px; /* 아이콘 자리(왼쪽 40px)를 비워두는 게 핵심! */
+  font-size: 16px;
+  font-family: inherit;
+  border: 1px solid var(--border-gray);
+  border-radius: 8px; /* 입력칸은 버튼(12px)보다 살짝 덜 둥글게 */
+  box-sizing: border-box; /* 패딩을 너비에 포함시키는 아주 중요한 마법! */
+  transition: border-color 0.2s, box-shadow 0.2s; /* 시인성을 높이기 위해 그림자 효과(box-shadow)도 추가 */
+}
+
+/* 입력칸을 눌렀을 때(포커스) 보라색 테두리와 살짝 빛나는 효과 뾰로롱 */
+.input-group input:focus {
+  outline: none;
+  border-color: var(--kraken-purple);
+  box-shadow: 0 0 0 3px rgba(113, 50, 245, 0.1); /* 크라켄 보라색 느낌의 은은한 그림자 */
+}
+
+/* 7. 메인 버튼 (크라켄 보라색 발사 버튼!) */
+.btn-primary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* 아이콘과 글씨 사이 간격 벌리기 */
+  background-color: var(--kraken-purple);
+  color: var(--bg-white);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 12px; /* 가이드라인: 12px 반지름 절대 준수! */
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+
+/* 마우스 올렸을 때 살짝 어두워지는 효과 */
+.btn-primary:hover {
+  background-color: var(--kraken-purple-dark);
+}
